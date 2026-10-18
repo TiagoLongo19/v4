@@ -1,0 +1,13 @@
+# Build output (regenerated from convite.html, see README)
+publicar/
+
+# Large originals kept outside the repo
+gerado/
+musica/The Moment.mp3
+
+# Third-party reference photos (venue sites, Wikimedia, Pinterest): research only, not published
+referencias/
+
+# Tool working files
+.impeccable/
+.taste-skill/
