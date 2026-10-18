@@ -155,92 +155,6 @@ html.js body.opened .hero-text > :nth-child(4) { transition-delay: .9s; }
 html.js body.opened .hero-text > :nth-child(5) { transition-delay: 1.05s; }
 html.js body.opened .hero-text > :nth-child(6) { transition-delay: 1.2s; }
 
-/* ── COUNTDOWN ────────────────────────── */
-.countdown { background: var(--sage); color: var(--on-sage); padding-block: 64px 40px; text-align: center; }
-.wreath { position: relative; width: 168px; margin: 0 auto 14px; }
-.wreath img { width: 100%; height: auto; }
-.wreath > span { position: absolute; inset: 0 0 10% 0; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 500; font-size: 2.5rem; letter-spacing: .04em; line-height: 1; color: #F3EEDC; }
-.wreath .amp { display: inline; font-weight: 400; font-size: .8em; margin: 0 .12em; }
-.countdown h2 { font-size: clamp(1.75rem, 7.6vw, 2.25rem); color: var(--on-sage); margin-right: -.12em; }
-.countdown .caps { color: var(--on-sage); margin-top: 8px; }
-.timer { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 36px; }
-.timer b { display: block; font-family: var(--display); font-weight: 500; font-size: clamp(2.5rem, 11vw, 3.5rem); line-height: 1; font-variant-numeric: lining-nums tabular-nums; }
-.timer span { display: block; margin-top: 8px; font-size: .9375rem; font-variant-caps: all-small-caps; letter-spacing: .1em; font-weight: 500; color: var(--on-sage); }
-
-/* ── DETAILS: arched venue cards ─────── */
-.details { padding-block: 80px 32px; }
- to { transform: rotate(.6deg); } }
-.venues { display: grid; gap: 56px; }
-.venue { display: grid; gap: 18px; justify-items: center; }
-.arch {
-  width: calc(100% + 2 * var(--gut)); margin-inline: calc(-1 * var(--gut)); background: var(--sage);
-  padding: 24px; position: relative;
-}
-.arch::before { content: ""; position: absolute; inset: 9px; border: 1px solid rgba(237, 230, 207, .45); pointer-events: none; }
-.arch-in {
-  background: var(--card); border-radius: 999px 999px 22px 22px; overflow: hidden; text-align: center;
-  padding-top: 64px; outline: 1px solid rgba(110, 123, 85, .35); outline-offset: -8px;
-}
-.arch h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.25rem; line-height: 1.2; color: var(--ink-soft); }
-.arch .place { margin-top: 6px; font-family: var(--display); font-size: clamp(1.375rem, 6vw, 1.625rem); line-height: 1.15; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: var(--ink); padding: 0 16px; }
-.arch .when { margin-top: 8px; color: var(--ink-soft); font-size: 1.0625rem; display: flex; justify-content: center; gap: 8px; align-items: center; padding: 0 20px; }
-.arch .when svg { width: 16px; height: 16px; }
-.arch .art { margin-top: 18px; mix-blend-mode: multiply; }
-.arch .art.crop { aspect-ratio: 4 / 3.4; object-fit: cover; object-position: 50% 52%; mix-blend-mode: normal; }
-.venue .actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5em, 1fr)); gap: 10px; width: 100%; max-width: 360px; }
-
-/* ── ORDER OF THE DAY ─────────────────── */
-.day { padding-top: 56px; overflow: hidden; }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; justify-items: center; text-align: center; position: relative; z-index: 1; }
-.steps li { display: grid; justify-items: center; gap: 2px; }
-.steps li + li::before { content: ""; display: block; width: 1px; height: 52px; background: var(--line); margin: 6px 0 10px; transform-origin: top; }
-.steps .t { font-size: .9375rem; font-variant-caps: all-small-caps; letter-spacing: .12em; font-weight: 500; color: var(--ink-soft); }
-.steps h3 { font-family: var(--display); font-weight: 600; font-size: 1.5rem; line-height: 1.2; letter-spacing: .02em; }
-.steps p { color: var(--ink-soft); max-width: 30ch; }
-.gate { width: 100%; aspect-ratio: 848 / 980; object-fit: cover; object-position: 50% 0; margin: -28% auto 0; mix-blend-mode: multiply; position: relative; z-index: 0;
-  -webkit-mask-image: radial-gradient(ellipse 72% 66% at 50% 56%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 72% 66% at 50% 56%, #000 62%, transparent 100%); }
-
-/* ── NÓS: the couple in the plaster frame ── */
-.us { background: var(--sage-frame); }
-.framed { position: relative; max-width: 520px; margin: 0 auto; }
-.framed > img { width: 100%; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 93%, transparent); mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 93%, transparent); }
-.framed .photo {
-  position: absolute; left: 26%; top: 25.3%; width: 48%; height: 52.2%;
-  border-radius: 50%; object-fit: cover; object-position: 50% 28%;
-  filter: sepia(.18) saturate(.9);
-}
-.strip { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px var(--gut) 56px; scroll-padding-inline: var(--gut); scrollbar-width: none; overscroll-behavior-x: contain; }
-.strip::-webkit-scrollbar { display: none; }
-.strip img { flex: none; width: 58%; max-width: 260px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 3px; scroll-snap-align: center; border: 5px solid var(--card); }
-.us .hint { text-align: center; color: #29311F; font-style: italic; padding-bottom: 8px; }
-
-/* ── CONFIRMAÇÃO: the couple's own numbers, call or WhatsApp ── */
-.rsvp { background: var(--ivory); padding-block: 72px 0; color: #29311F; }
-.bouquet { width: 112%; max-width: none; margin: 26px -6% -18%; height: auto; display: block; position: relative; z-index: 1; mix-blend-mode: multiply; }
-.rsvp { overflow-x: clip; }
-.rsvp .sec-head h2 { color: #29311F; }
-.rsvp .sec-head .caps { color: #2C3421; }
-.rsvp .deadline { text-align: center; margin: -18px auto 32px; font-size: 1.125rem; max-width: 32ch; }
-.people { display: grid; gap: 14px; }
-.person { background: var(--card); border-radius: 18px; padding: 22px 20px 20px; text-align: center; display: grid; gap: 4px; }
-.person h3 { font-family: var(--display); font-weight: 500; font-size: 1.75rem; line-height: 1.1; letter-spacing: .14em; margin-right: -.14em; text-transform: uppercase; color: var(--ink); }
-.person .num { font-size: 1.125rem; letter-spacing: .04em; font-variant-numeric: tabular-nums; color: var(--ink-soft); user-select: all; -webkit-user-select: all; }
-.person .actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(6.8em, 1fr)); gap: 10px; margin-top: 14px; }
-.person .btn { min-height: 50px; font-size: 1.0625rem; }
-.person .btn.wa { background: var(--card); color: var(--ink); border: 1.5px solid var(--sage-deep); }
-@media (hover: hover) and (pointer: fine) { .person .btn.wa:hover { background: #ECEADF; } }
-.rsvp .note { text-align: center; font-size: 1.0625rem; color: #2C3421; margin-top: 18px; font-style: italic; }
-
-/* ── FAREWELL ─────────────────────────── */
-.farewell { position: relative; }
-.farewell > img { width: 100%; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%); mask-image: linear-gradient(to bottom, transparent, #000 14%); }
-.farewell .txt { position: absolute; top: 8%; left: 0; right: 0; text-align: center; display: grid; gap: 6px; padding: 0 24px; }
-.farewell .rings { width: 54px; height: 32px; margin: 0 auto 6px; }
-.farewell h2 { font-size: clamp(1.875rem, 8.4vw, 2.5rem); margin-right: -.12em; }
-.farewell .caps { color: var(--ink-soft); }
-.farewell .note { font-style: italic; color: var(--ink-soft); }
-.credits { padding: 18px calc(var(--gut) + 40px) calc(28px + env(safe-area-inset-bottom, 0px)); text-align: center; font-size: .875rem; color: var(--ink-soft); line-height: 1.5; }
-
 /* music */
 .music {
   position: fixed; z-index: 40; right: max(16px, env(safe-area-inset-right, 0px), calc((100vw - var(--col)) / 2 + 16px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px));
@@ -273,22 +187,11 @@ html.js body.opened .hero-text > :nth-child(6) { transition-delay: 1.2s; }
 @keyframes nudge { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(4px); } }
 .next:active .ring { transform: scale(.93); }
 @media (hover: hover) and (pointer: fine) { .next:hover .ring { background: rgba(251, 250, 246, .9); border-color: var(--ink); } }
-.next.light { color: #F5F3EC; }
-.us .next { color: #29311F; }
-.us .next .ring { border-color: rgba(41, 49, 31, .45); }
-.next.light .ring { border-color: rgba(245, 243, 236, .5); background: rgba(245, 243, 236, .08); }
-@media (hover: hover) and (pointer: fine) { .next.light:hover .ring { background: rgba(245, 243, 236, .18); border-color: #F5F3EC; } }
 .hero .next { position: absolute; left: 50%; bottom: calc(26px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 2; }
 .hero .next .ring { background: transparent; border-color: rgba(74, 82, 54, .55); }
 .hero .next { color: #4A5236; }
 html.js .hero .next { opacity: 0; }
 html.js body.opened .hero .next { opacity: 1; transition: opacity 1s ease 1.4s; }
-.countdown .next { margin-top: 28px; }
-.cd-link { display: inline-block; margin-top: 30px; padding: 12px 6px; font-size: 1.0625rem; font-style: italic; color: var(--on-sage); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
-.cd-link:active { opacity: .7; }
-.details .next { margin-top: 64px; }
-.day .next { margin-top: 8px; padding-bottom: 40px; }
-.us .next { margin-top: -24px; padding-bottom: 40px; }
 
 /* reveal on scroll (visible without script) */
 html.js [data-reveal] { opacity: 0; transform: translateY(22px); }
@@ -304,88 +207,131 @@ html.js .steps li.in + li::before, html.js .steps li.in::before { transform: sca
   html.js .cover { transition: opacity .4s ease; }
   .cover.open { transform: none; }
 }
-@media (max-width: 360px) { :root { --gut: 18px; } .timer b { font-size: 2.25rem; } .venue .actions { grid-template-columns: 1fr; } }
+@media (max-width: 360px) { :root { --gut: 18px; } .timer b { font-size: 2.1rem; } }
 
 
-/* ═════ ONE SECTION, ONE SCREEN ═════
-   Every part of the invitation fills the phone screen and the page settles on each one, like turning a card.
-   Sections may grow past one screen only on very small phones; snapping still lands on their top. */
+/* ═════ ONE SECTION, ONE SCREEN, ONE CARD ═════
+   Every screen after the envelope is the same printed card as the opener: ivory card on ivory paper,
+   a fine double rule, sage ink, Cormorant capitals and EB Garamond, wheat sprigs and the drawn divider.
+   The page settles on each card in turn. On very small phones a card may grow past the screen. */
 html { scroll-snap-type: y mandatory; }
 main > header, main > section, main > footer {
   min-height: 100vh; min-height: 100svh; scroll-snap-align: start; scroll-snap-stop: always;
-  display: flex; flex-direction: column; justify-content: center;
+  display: flex; background: var(--ivory); color: var(--card-ink);
+  padding: calc(env(safe-area-inset-top, 0px) + 12px) max(12px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 12px) max(12px, env(safe-area-inset-left, 0px));
 }
-main > section > .col { padding-block: calc(env(safe-area-inset-top, 0px) + 28px) calc(env(safe-area-inset-bottom, 0px) + 20px); }
-.sec-head { margin-bottom: clamp(18px, 3svh, 32px); }
-.next { margin-top: clamp(14px, 2.4svh, 26px) !important; padding-bottom: 6px !important; }
+.sheet {
+  position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: clamp(12px, 2.2svh, 22px); text-align: center; min-width: 0;
+  background: var(--card); border: 1px solid rgba(74, 82, 54, .5); outline: 1px solid rgba(74, 82, 54, .28); outline-offset: -9px;
+  padding: clamp(30px, 5svh, 52px) 22px clamp(18px, 3svh, 30px); overflow: hidden;
+}
+.sheet > .sprig.tr { top: 12px; right: 10px; transform: rotate(8deg); }
+.sheet > .sprig.bl { bottom: 12px; left: 10px; transform: rotate(188deg); }
+.sec-head { margin: 0; gap: 6px; }
+.sec-head h2, .sheet > h2 { font-size: clamp(1.625rem, 7.2vw, 2.125rem); color: #4A5236; margin-right: -.12em; }
+.sec-head .caps { color: #4F5741; }
+.divider { width: 160px; margin-top: 6px; }
+.next { margin-top: auto !important; padding: 6px 6px 2px !important; color: #4A5236; }
+.next .ring { background: transparent; border-color: rgba(74, 82, 54, .55); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.sheet > .sec-head + * { margin-top: 0; }
+/* push content to the optical centre and the arrow to the foot */
+.sheet > :first-child { margin-top: auto; }
 
-/* countdown */
-.countdown { padding-block: 0; }
-.countdown .next { margin-top: clamp(16px, 3svh, 30px) !important; }
+/* buttons inside cards: stationery outline; the call button is the one filled action */
+.btn { border-radius: 3px; font: 500 1.0625rem/1 var(--serif); letter-spacing: .06em; font-variant-caps: all-small-caps; min-height: 46px; }
+.btn.ghost { background: transparent; color: #4A5236; border: 1px solid rgba(74, 82, 54, .6); }
+@media (hover: hover) and (pointer: fine) { .btn.ghost:hover { background: #F1EFE6; } }
+.btn svg { width: 17px; height: 17px; }
 
-/* venue screens: the card sized to the screen */
-.details { padding-block: 0; }
-.details-2 { background: var(--ivory); }
-.venues { display: contents; }
-.venue { gap: clamp(12px, 2svh, 18px); }
-.arch { padding: clamp(14px, 2.4svh, 24px); }
-.arch-in { padding-top: clamp(40px, 6.5svh, 64px); }
-.arch .art { max-height: clamp(150px, 27svh, 270px); width: 100%; object-fit: contain; object-position: 50% 100%; }
+/* countdown: numbers between hairlines, no ornaments beyond the card's own */
+.timer { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; max-width: 340px; margin: 4px 0 0; }
+.timer > div { padding: 6px 2px; }
+.timer > div + div { border-left: 1px solid rgba(74, 82, 54, .3); }
+.timer b { display: block; font-family: var(--display); font-weight: 500; font-size: clamp(2.3rem, 10.5vw, 3.1rem); line-height: 1; color: #4A5236; font-variant-numeric: lining-nums tabular-nums; }
+.timer span { display: block; margin-top: 8px; font-size: .9375rem; font-variant-caps: all-small-caps; letter-spacing: .1em; font-weight: 500; color: #59614A; }
+.cd-date { font-weight: 500; letter-spacing: .07em; text-transform: uppercase; font-size: clamp(.875rem, 3.9vw, 1rem); color: #4A5236; white-space: nowrap; }
+.cd-date .bar, .bar { display: inline-block; margin: 0 .5em; color: #8A9076; font-weight: 400; }
+.cd-link { display: inline-block; padding: 10px 6px; font-size: 1.0625rem; font-style: italic; color: #4A5236; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.cd-link:active { opacity: .7; }
 
-/* order of the day: the gate drawing lies behind the steps at the foot of the screen */
-.day { padding-top: 0; position: relative; overflow: hidden; }
-.day > .col { position: relative; z-index: 1; }
-.steps li + li::before { height: clamp(18px, 3.4svh, 34px); margin: 4px 0 8px; }
-.gate { position: absolute; left: 0; right: 0; bottom: 0; margin: 0 !important; width: 100%; aspect-ratio: auto; height: 42%; object-fit: cover; object-position: 50% 0; opacity: .4;
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 40%); mask-image: linear-gradient(to bottom, transparent, #000 40%); }
-.day .next { padding-bottom: 6px; }
+/* details: ceremony and celebration side by side, like the details card of a printed suite */
+.venues { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+.venue { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0 8px; min-width: 0; }
+.venue + .venue { border-left: 1px solid rgba(74, 82, 54, .3); }
+.vthumb { width: 100%; max-width: 170px; aspect-ratio: 4 / 4.6; object-fit: cover; border-radius: 999px 999px 4px 4px; border: 1px solid rgba(74, 82, 54, .35); padding: 4px; background: var(--card); margin-bottom: 8px; max-height: 26svh; }
+.venue h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.0625rem; color: #59614A; }
+.venue .place { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: clamp(1.0625rem, 4.7vw, 1.25rem); line-height: 1.15; color: #4A5236; text-wrap: balance; }
+.venue .when { font-weight: 500; letter-spacing: .06em; text-transform: uppercase; font-size: .875rem; color: #4A5236; margin-top: 2px; }
+.venue .where { font-size: .9375rem; line-height: 1.35; color: #59614A; }
+.venue .btn { margin-top: 10px; min-height: 44px; padding: 0 14px; }
+.details .cal { padding: 0 18px; }
 
-/* the couple in the frame: one calm screen */
-.us { align-items: center; background: linear-gradient(to bottom, #ADB196 0%, #A3A88A 45%, #94997A 100%); }
-.us .framed { width: min(100%, 64svh); }
-.us .next { margin-top: -8px !important; }
+/* order of the day: the ink gate drawing rests at the foot of the card */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; justify-items: center; position: relative; z-index: 1; }
+.steps li { display: grid; justify-items: center; gap: 0; }
+.steps li + li::before { content: ""; display: block; width: 1px; height: clamp(14px, 2.6svh, 26px); background: var(--line); margin: 6px 0 8px; transform-origin: top; }
+.steps .t { font-size: .9375rem; font-variant-caps: all-small-caps; letter-spacing: .12em; font-weight: 500; color: #59614A; }
+.steps h3 { font-family: var(--display); font-weight: 600; font-size: 1.375rem; line-height: 1.2; letter-spacing: .02em; color: #4A5236; }
+.steps p { color: #59614A; font-size: 1.0625rem; line-height: 1.4; max-width: 30ch; }
+.day .sheet { padding-bottom: 0; }
+.gate { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 34%; object-fit: cover; object-position: 50% 8%; opacity: .32; mix-blend-mode: multiply; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 45%); mask-image: linear-gradient(to bottom, transparent, #000 45%); }
+.day .next { position: relative; z-index: 1; margin-bottom: clamp(18px, 3svh, 30px); }
 
-/* album mosaic: prints mounted on the page */
-.gallery { background: var(--ivory); }
+/* the portrait, in a fine double-ruled oval */
+.portrait { margin: 0; width: min(68%, 34svh); aspect-ratio: 3 / 4; border-radius: 50%; padding: 7px; border: 1px solid rgba(74, 82, 54, .55); outline: 1px solid rgba(74, 82, 54, .3); outline-offset: 5px; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; border-radius: 50%; filter: sepia(.12) saturate(.9); }
+.us .sheet > h2 { margin-top: 10px; }
+
+/* album mosaic: prints mounted on the card, each photo centred in its frame */
 .mosaic {
-  display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, clamp(76px, 12.5svh, 124px)); gap: 7px;
+  display: grid; width: 100%; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, clamp(74px, 12svh, 118px)); gap: 7px;
   grid-template-areas: "a a b" "a a c" "d e e" "f e e";
 }
-.tile { margin: 0; padding: 4px; border: 1px solid rgba(74, 82, 54, .22); background: var(--card); cursor: zoom-in; display: block; min-width: 0; min-height: 0; overflow: hidden; touch-action: manipulation; transition: transform 160ms var(--ease-out); }
+.tile { margin: 0; padding: 4px; border: 1px solid rgba(74, 82, 54, .28); background: var(--card); cursor: zoom-in; display: block; min-width: 0; min-height: 0; overflow: hidden; touch-action: manipulation; transition: transform 160ms var(--ease-out); }
 .tile:active { transform: scale(.97); }
-.tile img { width: 100%; height: 100%; object-fit: cover; filter: sepia(.14) saturate(.88); }
+.tile img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; filter: sepia(.12) saturate(.88); }
 .ta { grid-area: a; } .tb { grid-area: b; } .tc { grid-area: c; } .td { grid-area: d; } .te { grid-area: e; } .tf { grid-area: f; }
-.mosaic-hint { text-align: center; font-style: italic; color: var(--ink-soft); font-size: 1rem; margin-top: 12px; }
 .lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100svh; width: 100%; height: 100%; }
 .lightbox::backdrop { background: rgba(28, 33, 22, .88); }
 .lightbox[open] { display: grid; place-items: center; }
 .lightbox img { max-width: calc(100% - 32px); max-height: calc(100svh - 120px); object-fit: contain; border: 6px solid var(--card); }
 .lb-close { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 12px); right: 12px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--card); color: var(--ink); font-size: 1.75rem; line-height: 1; cursor: pointer; }
 
-/* confirmação: compact cards, bouquet at the foot */
-.rsvp { padding-block: 0; justify-content: flex-start; }
-.rsvp > .col { padding-top: calc(env(safe-area-inset-top, 0px) + clamp(28px, 6svh, 64px)); }
-.rsvp .deadline { margin: -6px auto clamp(14px, 2.4svh, 24px); }
-.people { gap: 10px; }
-.person { padding: 14px 16px 16px; gap: 2px; }
-.person .actions { margin-top: 10px; }
-.person .btn { min-height: 46px; }
-.bouquet { margin: auto -6% 0 !important; width: 112%; }
+/* confirmação: the deadline set as the card's centrepiece, then the two contacts */
+.deadline-box { width: fit-content; max-width: 100%; padding: 14px 22px 15px; border: 1px solid rgba(74, 82, 54, .55); outline: 1px solid rgba(74, 82, 54, .28); outline-offset: -6px; margin: 4px 0; background: #F6F4EC; }
+.dl-label { font-style: italic; font-size: 1.0625rem; color: #59614A; }
+.dl-date { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: clamp(1.1875rem, 5.4vw, 1.5rem); line-height: 1.15; color: #4A5236; margin-top: 4px; white-space: nowrap; }
+.rsvp .deadline { font-size: 1.0625rem; line-height: 1.45; color: #4F5741; max-width: 30ch; margin: 0; }
+.people { display: grid; gap: 0; width: 100%; max-width: 340px; }
+.person { padding: 12px 0; display: grid; gap: 2px; text-align: center; }
+.person + .person { border-top: 1px solid rgba(74, 82, 54, .25); }
+.person h3 { font-family: var(--display); font-weight: 500; font-size: 1.5rem; line-height: 1.1; letter-spacing: .14em; margin-right: -.14em; text-transform: uppercase; color: #4A5236; }
+.person .num { font-size: 1.0625rem; letter-spacing: .04em; font-variant-numeric: lining-nums tabular-nums; color: #59614A; user-select: all; -webkit-user-select: all; }
+.person .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.person .btn { min-height: 44px; }
+.person .btn.wa { background: transparent; color: #4A5236; border: 1px solid rgba(74, 82, 54, .6); }
 
-/* farewell: the valley fills the last screen */
-footer { position: relative; justify-content: flex-start; background: #FAF8EF; }
-.farewell { flex: 1; display: flex; flex-direction: column; }
-.farewell > img { flex: 1; width: 100%; min-height: 0; object-fit: cover; object-position: 50% 100%; }
-.credits { padding-top: 10px; }
+/* farewell: bouquet above the names, the valley at the foot of the last card */
+footer .sheet { padding: 0; justify-content: flex-start; gap: 0; }
+.farewell .bouquet { width: 92%; margin: clamp(26px, 5svh, 48px) auto 0; mix-blend-mode: multiply; }
+.farewell .txt { display: grid; gap: 6px; padding: 10px 24px 0; }
+.farewell h2 { font-size: clamp(1.75rem, 7.6vw, 2.25rem); color: #4A5236; margin-right: -.12em; }
+.fw-date { font-weight: 500; letter-spacing: .2em; color: #4A5236; }
+.farewell .note { font-style: italic; color: #59614A; }
+.farewell .vale { flex: 1 1 0; height: 0; width: 100%; min-height: 120px; object-fit: cover; object-position: 50% 100%; margin-top: 10px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%); mask-image: linear-gradient(to bottom, transparent, #000 22%); }
+.credits { padding: 10px 56px 14px; font-size: .8125rem; line-height: 1.45; color: #59614A; text-align: center; }
 
+@media (max-width: 360px) { .venue .place { font-size: 1rem; } .venue .where { font-size: .875rem; } }
 @media (max-height: 700px) {
-  .rsvp .deadline { font-size: 1.0625rem; line-height: 1.45; }
-  .person { padding: 10px 14px 12px; }
-  .person h3 { font-size: 1.5rem; }
-  .bouquet { width: 96%; margin-inline: 2% !important; }
-  .wreath { width: 128px; }
-  .timer { margin-top: 20px; }
-  .cd-link { margin-top: 14px; }
+  .sheet { gap: 10px; padding-top: 24px; }
+  .vthumb { max-height: 22svh; }
+  .steps h3 { font-size: 1.25rem; }
+  .steps p { font-size: 1rem; }
+  .portrait { width: min(62%, 32svh); }
+  .farewell .bouquet { width: 80%; }
 }
 </style>
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.inviteReady){document.documentElement.classList.remove('js','locked')}},4000)</script>
@@ -429,65 +375,58 @@ footer { position: relative; justify-content: flex-start; background: #FAF8EF; }
 
   <!-- COUNTDOWN -->
   <section class="countdown" aria-labelledby="cd-h">
-    <div class="col">
-      <div class="wreath" aria-hidden="true" data-reveal><img src="img/coroa-espigas.png" alt="" width="560" height="543" loading="lazy"><span>I<span class="amp">&amp;</span>L</span></div>
-      <h2 id="cd-h" data-reveal>Contagem decrescente</h2>
-      <p class="caps" data-reveal style="--d:80ms">Até ao grande dia</p>
-      <div class="timer" role="timer" data-reveal style="--d:160ms">
+    <div class="sheet">
+      <div class="sec-head" data-reveal>
+        <h2 id="cd-h">Contagem decrescente</h2>
+        <p class="caps">Até ao grande dia</p>
+        <img class="divider" src="img/divisor-espigas.png" alt="" width="600" height="61">
+      </div>
+      <div class="timer" role="timer" data-reveal style="--d:120ms">
         <div><b id="cd-d">—</b><span>Dias</span></div>
         <div><b id="cd-h2">—</b><span>Horas</span></div>
         <div><b id="cd-m">—</b><span>Minutos</span></div>
         <div><b id="cd-s">—</b><span>Segundos</span></div>
       </div>
-      <a class="cd-link" href="#confirmar" data-reveal style="--d:240ms">Confirmar presença até 31 de agosto</a>
+      <p class="cd-date" data-reveal style="--d:200ms">Sexta-feira<span class="bar" aria-hidden="true">|</span>29 de outubro de 2027</p>
+      <a class="cd-link" href="#confirmar" data-reveal style="--d:260ms">Confirmar presença até 31 de agosto</a>
+      <img class="sprig tr" src="img/ramo-canto.png" alt="" width="200" height="439">
+      <img class="sprig bl" src="img/ramo-canto.png" alt="" width="200" height="439">
     </div>
   </section>
 
-  <!-- DETAILS 1: CERIMÓNIA -->
+  <!-- DETAILS: both places on one card -->
   <section class="details" aria-labelledby="det-h">
-    <div class="col">
+    <div class="sheet">
       <div class="sec-head" data-reveal>
         <h2 id="det-h">Os detalhes</h2>
         <p class="caps">Tudo o que precisam de saber</p>
         <img class="divider" src="img/divisor-espigas.png" alt="" width="600" height="61">
       </div>
-        <article class="venue" data-reveal>
-          <div class="arch"><div class="arch-in">
-            <h3>Cerimónia</h3>
-            <p class="place">Mosteiro de Grijó</p>
-            <p class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sexta-feira, 29 de outubro, às 12h00</p>
-            <img class="art" src="img/mosteiro-aguarela.jpg" alt="Aguarela da igreja do Mosteiro de Grijó, com o relógio no frontão, a torre sineira branca e os três arcos da entrada" width="1100" height="730" loading="lazy">
-          </div></div>
-          <div class="actions">
-            <a class="btn" target="_blank" rel="noopener" aria-label="Google Maps: Mosteiro de Grijó" href="https://www.google.com/maps/search/?api=1&amp;query=Igreja+do+Mosteiro+de+Grij%C3%B3%2C+Vila+Nova+de+Gaia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Google Maps</a>
-            <a class="btn cal" target="_blank" rel="noopener" aria-label="Juntar ao calendário" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/></svg>Calendário</a>
-          </div>
+      <div class="venues" data-reveal>
+        <article class="venue">
+          <img class="vthumb" src="img/mosteiro-aguarela.jpg" alt="Aguarela da igreja do Mosteiro de Grijó, com o relógio no frontão, a torre sineira branca e os três arcos da entrada" width="1100" height="730" loading="lazy">
+          <h3>Cerimónia</h3>
+          <p class="place">Mosteiro de Grijó</p>
+          <p class="when">12h00</p>
+          <p class="where">Vila Nova de Gaia</p>
+          <a class="btn ghost" target="_blank" rel="noopener" aria-label="Ver no mapa: Mosteiro de Grijó" href="https://www.google.com/maps/search/?api=1&amp;query=Igreja+do+Mosteiro+de+Grij%C3%B3%2C+Vila+Nova+de+Gaia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Mapa</a>
         </article>
-    </div>
-  </section>
-
-  <!-- DETAILS 2: CELEBRAÇÃO -->
-  <section class="details details-2" aria-label="Celebração">
-    <div class="col">
-        <article class="venue" data-reveal>
-          <div class="arch"><div class="arch-in">
-            <h3>Celebração</h3>
-            <p class="place">Quinta O Campo</p>
-            <p class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>A seguir à cerimónia</p>
-            <p class="when" style="margin-top:2px">Rua do Viso, 273 · Freamunde</p>
-            <img class="art" src="img/quinta-aguarela.jpg" alt="Aguarela da Quinta O Campo: pérgolas de madeira cobertas de videira, lâmpadas penduradas, velas brancas de sombra e sofás no deck" width="1100" height="880" loading="lazy">
-          </div></div>
-          <div class="actions">
-            <a class="btn" target="_blank" rel="noopener" aria-label="Google Maps: Quinta O Campo" href="https://www.google.com/maps/search/?api=1&amp;query=Quinta+O+Campo%2C+Rua+do+Viso+273%2C+Freamunde"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Google Maps</a>
-            <a class="btn cal" target="_blank" rel="noopener" aria-label="Juntar ao calendário" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/></svg>Calendário</a>
-          </div>
+        <article class="venue">
+          <img class="vthumb" src="img/quinta-aguarela.jpg" alt="Aguarela da Quinta O Campo: pérgolas de madeira cobertas de videira, lâmpadas penduradas, velas brancas de sombra e sofás no deck" width="1100" height="880" loading="lazy">
+          <h3>Celebração</h3>
+          <p class="place">Quinta O&nbsp;Campo</p>
+          <p class="when">A seguir à cerimónia</p>
+          <p class="where">Rua do Viso, 273 · Freamunde</p>
+          <a class="btn ghost" target="_blank" rel="noopener" aria-label="Ver no mapa: Quinta O Campo" href="https://www.google.com/maps/search/?api=1&amp;query=Quinta+O+Campo%2C+Rua+do+Viso+273%2C+Freamunde"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Mapa</a>
         </article>
+      </div>
+      <a class="btn ghost cal" target="_blank" rel="noopener" href="#" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/></svg>Juntar ao calendário</a>
     </div>
   </section>
 
   <!-- ORDER OF THE DAY -->
   <section class="day" aria-labelledby="day-h">
-    <div class="col">
+    <div class="sheet">
       <div class="sec-head" data-reveal>
         <h2 id="day-h">O nosso dia</h2>
         <p class="caps">O que preparámos para vocês</p>
@@ -499,65 +438,73 @@ footer { position: relative; justify-content: flex-start; background: #FAF8EF; }
         <li data-reveal><h3>Copo-de-água</h3><p>Na Quinta O Campo, debaixo das videiras</p></li>
         <li data-reveal><h3>Festa</h3><p>Até à última música tocar</p></li>
       </ol>
+      <img class="gate" src="img/portao.jpg" alt="" width="848" height="1264" loading="lazy">
     </div>
-    <img class="gate" src="img/portao.jpg" alt="Desenho a tinta do portão de uma quinta com uma pérgola de videiras" width="848" height="1264" loading="lazy">
   </section>
 
-  <!-- NÓS -->
-  <section class="us" aria-label="Isabel e Luís">
-    <div class="framed" data-reveal>
-      <img src="img/moldura.jpg" alt="" width="856" height="1090" loading="lazy">
-      <img class="photo" src="img/pergola.jpg" alt="Isabel e Luís debaixo de uma pérgola com luzes, ao pôr do sol" width="1122" height="1402" loading="lazy">
+  <!-- NÓS: the portrait, framed like the card -->
+  <section class="us" aria-labelledby="us-h">
+    <div class="sheet">
+      <figure class="portrait" data-reveal>
+        <img src="img/gala.jpg" alt="Isabel e Luís vestidos de gala, sentados lado a lado" width="572" height="985" loading="lazy">
+      </figure>
+      <h2 id="us-h" data-reveal style="--d:120ms">Isabel &amp; Luís</h2>
+      <img class="divider" src="img/divisor-espigas.png" alt="" width="600" height="61" data-reveal style="--d:180ms">
+      <img class="sprig tr" src="img/ramo-canto.png" alt="" width="200" height="439">
+      <img class="sprig bl" src="img/ramo-canto.png" alt="" width="200" height="439">
     </div>
   </section>
 
   <!-- MOMENTOS: album mosaic -->
   <section class="gallery" aria-labelledby="gal-h">
-    <div class="col">
+    <div class="sheet">
       <div class="sec-head" data-reveal>
         <h2 id="gal-h">Os nossos momentos</h2>
         <p class="caps">Um pouco da nossa história</p>
         <img class="divider" src="img/divisor-espigas.png" alt="" width="600" height="61">
       </div>
       <div class="mosaic" data-reveal>
-        <button class="tile ta" type="button"><img src="img/luzes.jpg" alt="Isabel e Luís debaixo de luzes, com o anel de noivado" width="800" height="449" loading="lazy" style="object-position:62% 50%"></button>
-        <button class="tile tb" type="button"><img src="img/gala.jpg" alt="Isabel e Luís vestidos de gala" width="572" height="985" loading="lazy" style="object-position:50% 22%"></button>
-        <button class="tile tc" type="button"><img src="img/mar.jpg" alt="Isabel e Luís ao pôr do sol junto ao mar" width="800" height="1041" loading="lazy" style="object-position:50% 35%"></button>
-        <button class="tile td" type="button"><img src="img/noite.jpg" alt="Isabel e Luís numa noite fora" width="420" height="750" loading="lazy" style="object-position:50% 30%"></button>
-        <button class="tile te" type="button"><img src="img/abraco.jpg" alt="Isabel e Luís abraçados, a preto e branco" width="800" height="931" loading="lazy" style="object-position:50% 30%"></button>
-        <button class="tile tf" type="button"><img src="img/sofa.jpg" alt="Isabel e Luís sentados num sofá" width="700" height="1209" loading="lazy" style="object-position:50% 30%"></button>
+        <button class="tile ta" type="button"><img src="img/luzes.jpg" alt="Isabel e Luís debaixo de luzes, com o anel de noivado" width="800" height="449" loading="lazy"></button>
+        <button class="tile tb" type="button"><img src="img/pergola.jpg" alt="Isabel e Luís ao pôr do sol, debaixo de uma pérgola com luzes" width="900" height="1125" loading="lazy"></button>
+        <button class="tile tc" type="button"><img src="img/mar.jpg" alt="Isabel e Luís ao pôr do sol junto ao mar" width="800" height="1041" loading="lazy"></button>
+        <button class="tile td" type="button"><img src="img/noite.jpg" alt="Isabel e Luís numa noite fora" width="420" height="750" loading="lazy"></button>
+        <button class="tile te" type="button"><img src="img/abraco.jpg" alt="Isabel e Luís abraçados, a preto e branco" width="800" height="931" loading="lazy"></button>
+        <button class="tile tf" type="button"><img src="img/sofa.jpg" alt="Isabel e Luís sentados num sofá" width="700" height="1209" loading="lazy"></button>
       </div>
-      <p class="mosaic-hint" data-reveal>Toquem numa fotografia para a ver maior</p>
     </div>
   </section>
 
   <!-- CONFIRMAÇÃO -->
   <section class="rsvp" id="confirmar" aria-labelledby="rsvp-h">
-    <div class="col">
+    <div class="sheet">
       <div class="sec-head" data-reveal>
         <h2 id="rsvp-h">Confirmação</h2>
         <p class="caps">Esperamos que possam vir</p>
         <img class="divider" src="img/divisor-espigas.png" alt="" width="600" height="61">
       </div>
-      <p class="deadline" data-reveal>Pedimos a vossa resposta até <strong>31 de agosto de 2027</strong>. Digam-nos quantos vêm e se há alguma alergia ou restrição alimentar.</p>
+      <div class="deadline-box" data-reveal>
+        <p class="dl-label">Respondam até</p>
+        <p class="dl-date">31 de agosto de 2027</p>
+      </div>
+      <p class="deadline" data-reveal>Digam-nos quantos vêm e se há alguma alergia ou restrição alimentar.</p>
       <div class="people" id="people" data-reveal></div>
     </div>
-    <img class="bouquet" src="img/ramo-final.png" alt="" width="1000" height="418" loading="lazy" data-reveal>
   </section>
 
   <!-- FAREWELL -->
   <footer>
-    <div class="farewell">
-      <img src="img/vale.jpg" alt="Aguarela das colinas do Vale do Sousa no outono, com vinhas, uma capela e uma casa de pedra" width="752" height="1184" loading="lazy">
+    <div class="sheet farewell">
+      <img class="bouquet" src="img/ramo-final.png" alt="" width="1000" height="418" loading="lazy">
       <div class="txt" data-reveal>
-        <svg class="rings" viewBox="0 0 54 32" fill="none" stroke="#B8924A" stroke-width="2.2" aria-hidden="true"><circle cx="20" cy="17" r="11"/><circle cx="34" cy="17" r="11"/></svg>
         <h2>Isabel &amp; Luís</h2>
-        <p class="caps">29 · 10 · 2027</p>
+        <p class="fw-date">29 · 10 · 2027</p>
         <p class="note">Mal podemos esperar por vos ver.</p>
       </div>
+      <img class="vale" src="img/vale.jpg" alt="Aguarela das colinas do Vale do Sousa no outono, com vinhas, uma capela e uma casa de pedra" width="752" height="1184" loading="lazy">
+      <p class="credits">Música: Kenny G, “The Moment”. Ilustrações criadas para este convite.</p>
     </div>
-    <p class="credits">Música: Kenny G, “The Moment”. Ilustrações em aguarela criadas para este convite.</p>
   </footer>
+</main>
 </main>
 
 <script>
@@ -673,7 +620,7 @@ chain.slice(0, -2).forEach(function (sec, i) {
   var next = chain[i + 1];
   var key = sec.classList[0];
   var b = document.createElement("button");
-  b.type = "button"; b.className = "next" + (key === "countdown" ? " light" : "");
+  b.type = "button"; b.className = "next";
   var h = next.querySelector("h2");
   b.setAttribute("aria-label", ends[key] || ("Ir para: " + (h ? h.textContent.trim() : "secção seguinte")));
   b.innerHTML = (ends[key] ? "<span>" + ends[key] + "</span>" : "") +
@@ -682,8 +629,8 @@ chain.slice(0, -2).forEach(function (sec, i) {
     next.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     var t = next.querySelector("h2") || next; t.setAttribute("tabindex", "-1"); t.focus({ preventScroll: true });
   });
-  var col = sec.querySelector(".col");
-  (col && col.parentNode === sec && key !== "us" ? col : sec).appendChild(b);
+  var sheet = sec.querySelector(".sheet");
+  (sheet && sheet.parentNode === sec ? sheet : sec).appendChild(b);
 });
 
 /* Mosaic: tap a print to see it large */
