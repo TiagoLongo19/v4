@@ -371,7 +371,7 @@ footer .sheet > :first-child { margin-top: 0; }
       <h1><span class="name">Isabel</span> <span class="amp">&amp;</span> <span class="name">Luís</span></h1>
       <p class="lead">Temos o prazer de vos convidar<br>para o nosso casamento</p>
       <div class="info">
-        <p class="dateline">Sexta-feira<span class="bar" aria-hidden="true">|</span>12h00</p>
+        <p class="dateline">Sexta-feira<span class="bar" aria-hidden="true">|</span>11h30</p>
         <p class="numdate" aria-label="29 de outubro de 2027">29<span class="dt">.</span>10<span class="dt">.</span>2027</p>
       </div>
     </div>
@@ -408,7 +408,7 @@ footer .sheet > :first-child { margin-top: 0; }
           <div class="vtext">
             <p class="dateline">Cerimónia</p>
             <h3 class="place">Mosteiro de Grijó</h3>
-            <p class="where"><span class="time">12h00</span><br>Vila Nova de Gaia</p>
+            <p class="where"><span class="time">11h30</span><br>Vila Nova de Gaia</p>
             <a class="maplink" target="_blank" rel="noopener" aria-label="Ver no mapa: Mosteiro de Grijó" href="https://www.google.com/maps/search/?api=1&amp;query=Igreja+do+Mosteiro+de+Grij%C3%B3%2C+Vila+Nova+de+Gaia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Ver no mapa</a>
           </div>
         </article>
@@ -435,7 +435,7 @@ footer .sheet > :first-child { margin-top: 0; }
         <img class="divider" src="img/divisor-espigas.png" alt="" width="600" height="61">
       </div>
       <ol class="steps">
-        <li data-reveal><p class="t">12h00</p><h3>Cerimónia</h3><p>Na igreja do Mosteiro de Grijó</p></li>
+        <li data-reveal><p class="t">11h30</p><h3>Cerimónia</h3><p>Na igreja do Mosteiro de Grijó</p></li>
         <li data-reveal><h3>A caminho do campo</h3><p>Cerca de 45 minutos até Freamunde</p></li>
         <li data-reveal><h3>Copo-de-água</h3><p>Na Quinta O Campo, debaixo das videiras</p></li>
         <li data-reveal><h3>Festa</h3><p>Até à última música tocar</p></li>
@@ -513,7 +513,7 @@ var CONFIG = {
   musicaFicheiro: "musica/the-moment.mp3",       // ficheiro de música ao lado deste ficheiro; vazio = YouTube
   youtubeId: "uRe2hSAM4Ps"                       // Kenny G, The Moment
 };
-var WEDDING = new Date("2027-10-29T12:00:00+01:00");
+var WEDDING = new Date("2027-10-29T11:30:00+01:00");
 /* ═══════════════════════════════════ */
 
 /* Plain ES2017 on purpose: older phones (iOS 12, old Android Chrome) must still open the invitation. */
@@ -584,7 +584,7 @@ var calUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
   "&text=" + encodeURIComponent("Casamento " + CONFIG.noiva + " & " + CONFIG.noivo) +
   "&dates=20271029/20271030" +
   "&location=" + encodeURIComponent("Igreja do Mosteiro de Grijó, Vila Nova de Gaia") +
-  "&details=" + encodeURIComponent("12h00, cerimónia na igreja do Mosteiro de Grijó.\nA seguir, copo-de-água na Quinta O Campo, Rua do Viso 273, 4590-350 Freamunde.");
+  "&details=" + encodeURIComponent("11h30, cerimónia na igreja do Mosteiro de Grijó.\nA seguir, copo-de-água na Quinta O Campo, Rua do Viso 273, 4590-350 Freamunde.");
 Array.prototype.forEach.call(document.querySelectorAll(".cal"), function (a) { a.href = calUrl; });
 
 /* Contacts: call or WhatsApp each of the couple */
